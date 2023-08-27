@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+
+    <canvas oncontextmenu="event.preventDefault()" style="position: absolute; top: 0; left: 0;"></canvas>
+
+    <script type='text/javascript'>
+      var c = document.querySelector("canvas");
+      c.setAttribute('width', window.innerWidth.toString());
+      c.setAttribute('height', window.innerHeight.toString());
+      var Module = {
+          canvas: (function() { return document.querySelector('canvas'); })()
+      };
+      window.addEventListener("resize", function(){
+        c.setAttribute('width', window.innerWidth.toString());
+        c.setAttribute('height', window.innerHeight.toString());
+      });
+    </script>
+
+    <script src="index.js"></script>
+    
+</body>
+
+</html>
